@@ -5,22 +5,23 @@ export const container = style({
   margin: "0 auto",
   padding: "40px 24px 64px",
   display: "grid",
-  gap: "24px",
+  gap: "28px",
 });
 
 export const header = style({
   display: "grid",
-  gap: "8px",
+  gap: "10px",
   paddingBottom: "24px",
   borderBottom: "1px solid #e2e8f0",
 });
 
 export const title = style({
   margin: 0,
-  fontSize: "30px",
+  fontSize: "28px",
   fontWeight: 800,
   color: "#0f172a",
   letterSpacing: "-0.3px",
+  lineHeight: 1.3,
 });
 
 export const description = style({
@@ -54,13 +55,9 @@ export const emptyIcon = style({
 export const answerBox = style({
   border: "1px solid #e2e8f0",
   borderRadius: "16px",
-  padding: "28px 32px",
+  padding: "32px",
   backgroundColor: "#ffffff",
-  color: "#1e293b",
-  whiteSpace: "pre-wrap",
-  lineHeight: 1.8,
-  fontSize: "15px",
-  boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+  boxShadow: "0 1px 4px rgba(0,0,0,0.05)",
 });
 
 export const meta = style({
@@ -81,12 +78,28 @@ export const metaDot = style({
   display: "inline-block",
 });
 
+export const tags = style({
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "6px",
+});
+
+export const tag = style({
+  display: "inline-block",
+  padding: "4px 12px",
+  borderRadius: "999px",
+  backgroundColor: "#ede9fe",
+  color: "#6d28d9",
+  fontSize: "12px",
+  fontWeight: 500,
+});
+
 export const backLink = style({
   display: "inline-flex",
   alignItems: "center",
   gap: "6px",
-  padding: "8px 16px",
-  borderRadius: "8px",
+  padding: "10px 20px",
+  borderRadius: "10px",
   backgroundColor: "#f1f5f9",
   color: "#475569",
   textDecoration: "none",

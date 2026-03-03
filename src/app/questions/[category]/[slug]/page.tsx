@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CategoryNav } from "@/features/questions/ui/CategoryNav";
+import { AnswerRenderer } from "@/features/questions/ui/AnswerRenderer";
 import {
   CATEGORY_META,
   getAllQuestions,
@@ -40,9 +41,20 @@ export default async function QuestionDetailPage({
           <span className={styles.metaDot} />
           <span>업데이트: {question.updatedAt}</span>
         </p>
+        {question.tags.length > 0 && (
+          <div className={styles.tags}>
+            {question.tags.map((tag) => (
+              <span key={tag} className={styles.tag}>
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
-      <article className={styles.answerBox}>{question.answer}</article>
+      <article className={styles.answerBox}>
+        <AnswerRenderer content={question.answer} />
+      </article>
 
       <Link className={styles.backLink} href={`/questions/${category}`}>
         ← 목록으로 돌아가기
