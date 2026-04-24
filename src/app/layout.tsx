@@ -27,6 +27,9 @@ export default function RootLayout({
               <Link className={styles.navLink} href="/">
                 홈
               </Link>
+              <Link className={styles.navLink} href="/quiz">
+                퀴즈
+              </Link>
               {CATEGORY_ORDER.map((category) => (
                 <Link
                   key={category}
